@@ -6,6 +6,8 @@
 	">
 </head>
 <body>
-	<h1>Site Under Construction</h1>
+	<div class="center">
+		<h1>Site Under Construction</h1>
+	</div>
 </body>
 </html>
