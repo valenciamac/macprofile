@@ -1,6 +1,4 @@
-<IfModule mod_rewrite.c>
-	RewriteEngine On
-	RewriteBase /
-	RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
-	RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
-</IfModule>
+RewriteEngine On
+RewriteBase /
+RewriteCond %{HTTP_HOST} ^valenciamark.com [NC]
+RewriteRule ^(.*)$ http://www.valenciamark.com/$1 [L,R=301]
