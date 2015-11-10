@@ -22,7 +22,7 @@
 	{
 		$conn = new PDO("mysql:host=$host;dbname=u569767831_nativ", $username , $password);
 		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
+		echo "pasok";
 		$check = $conn->query("use myprofile");
 
 		if(!$check)
