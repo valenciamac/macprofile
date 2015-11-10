@@ -20,13 +20,14 @@
 
 	try
 	{
-		$conn = new PDO("mysql:host=$server;dbname=u569767831_nativ",$username , $password);
+		$conn = new PDO("mysql:host=$host;dbname=u569767831_nativ",$username , $password);
 		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 		$check = $conn->query("use myprofile");
 
 		if(!$check)
 		{
+			$conn;
 			$sql = "CREATE DATABASE myprofile";
 
 			$success = $conn->exec($sql);
