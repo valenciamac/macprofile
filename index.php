@@ -14,37 +14,19 @@
 
 <?php
 
-	$host = "localhost";
+	$host = "mysql.hostinger.ph";
 	$username = "u569767831_markv";
 	$password = "848501307";
 
 	try
 	{
-		$conn = new PDO("mysql:host=$host;dbname=u569767831_nativ", $username , $password);
-		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-		
-		$check = $conn->query("use myprofile");
-		echo "pasok";
-		if(!$check)
-		{
-			echo "pasok";
-			$sql = "CREATE DATABASE myprofile";
+		$conn = new PDO("mysql:host=$server;dbname=u569767831_nativ",$username , $password);
+		$conn->setAttribute(PDO::ATTTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		$sql = "CREATE DATABASE IF NOT EXISTS myprofile";
 
-			$success = $conn->exec($sql);
-
-			if ($success)
-			{
-				echo "Database created successfully.<br>";
-			}
-			else
-			{
-				echo "Error creating database" . "<br>" . mysql_error() . "\n";
-			}
-		}
-		else
-		{
-			echo "dito nasira";
-		}
+		$conn->exec($sql);
+		$conn->query("use myprofile");
+		echo "Database created successfully.<br>";
 	}
 	catch(PDOEXCEPTION $e)
 	{
