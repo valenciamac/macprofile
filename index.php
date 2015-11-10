@@ -25,7 +25,6 @@
 		$sql = "CREATE DATABASE IF NOT EXISTS myprofile";
 
 		$conn->exec($sql);
-		$conn->query("use myprofile");
 		echo "Database created successfully.<br>";
 	}
 	catch(PDOEXCEPTION $e)
