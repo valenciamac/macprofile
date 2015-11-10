@@ -21,7 +21,7 @@
 	try
 	{
 		$conn = new PDO("mysql:host=$server;dbname=u569767831_nativ",$username , $password);
-		$conn->setAttribute(PDO::ATTTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		$sql = "CREATE DATABASE IF NOT EXISTS myprofile";
 
 		$conn->exec($sql);
