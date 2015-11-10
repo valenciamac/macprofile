@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	<title>Welcome to my Portfolio</title>
@@ -10,8 +10,8 @@
 		<h1>Site Under Construction</h1>
 	</div>
 </body>
-</html> -->
-
+</html>
+<!-- 
 <?php
 
 	$host = "mysql.hostinger.ph";
@@ -33,4 +33,4 @@
 	}
 
 	$conn = null;
-?>
+?> -->
