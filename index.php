@@ -14,7 +14,7 @@
 
 <?php
 
-	$host = "mysql.hostinger.ph";
+	$host = "localhost";
 	$username = "u569767831_markv";
 	$password = "848501307";
 
