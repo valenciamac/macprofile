@@ -27,6 +27,7 @@
 
 		if(!$check)
 		{
+			echo "pasok";
 			$sql = "CREATE DATABASE myprofile";
 
 			$success = $conn->exec($sql);
