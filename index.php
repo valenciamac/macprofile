@@ -14,25 +14,37 @@
 
 <?php
 
-	$link = mysql_connect('u569767831_nativ','u569767831_markv', '848501307');
-	if (!$link){
-		die('could not connect to database' . mysql_error());
-	}
+	$host = "mysql.hostinger.ph";
+	$username = "u569767831_markv";
+	$password = "848501307";
 
-	$db_selected = my_sql_select_db('myprofile', $link);
-
-	if (!$db_selected)
+	try
 	{
-		$sql = 'CREATE DATABASE myprofile';
+		$conn = new PDO("mysql:host=$server;dbname=u569767831_nativ",$username , $password);
+		$conn->setAttribute(PDO::ATTTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-		if (mysql_query($sql, $link))
+		$check = $conn->query("use myprofile");
+
+		if(!$check)
 		{
-			echo "Database my_db created successfully\n";
-		}
-		else
-		{
-			echo 'Error creating database' . mysql_error() . "\n";
+			$sql = "CREATE DATABASE myprofile";
+
+			$success = $conn->exec($sql);
+
+			if ($success)
+			{
+				echo "Database created successfully.<br>";
+			}
+			else
+			{
+				echo "Error creating database" . "<br>" . mysql_error() . "\n";
+			}
 		}
 	}
-	mysql_close($link);
+	catch(PDOEXCEPTION $e)
+	{
+		echo $sql . "<br>" . $e->getMessage();
+	}
+
+	$conn = null;
 ?>
