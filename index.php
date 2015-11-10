@@ -22,7 +22,7 @@
 	{
 		$conn = new PDO("mysql:host=$server;dbname=u569767831_nativ",$username , $password);
 		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-		$sql = "CREATE DATABASE IF NOT EXISTS myprofile";
+		$sql = "CREATE DATABASE IF NOT EXISTS u569767831_nativ";
 
 		$conn->exec($sql);
 		echo "Database created successfully.<br>";
