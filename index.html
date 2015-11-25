@@ -2,11 +2,38 @@
 <html>
 <head>
 	<title>Welcome to my Portfolio</title>
-	<link rel="stylesheet" type="text/css" href="css/mystyle.css
-	">
+	<link rel="stylesheet" type="text/css" href="css/mystyle.css">
+	<script type="text/javascript">
+    <!--
+    function updateTime() {
+        var currentTime = new Date();
+        var hours = currentTime.getHours();
+        var minutes = currentTime.getMinutes();
+        var seconds = currentTime.getSeconds();
+        if (minutes < 10){
+            minutes = "0" + minutes;
+        }
+        if (seconds < 10){
+            seconds = "0" + seconds;
+        }
+        if (hours < 10){
+            hours = "0" + hours;
+        }
+        var v = hours + ":" + minutes + ":" + seconds + " ";
+        if(hours > 11){
+            v+="PM";
+        } else {
+            v+="AM"
+        }
+        setTimeout("updateTime()",1000);
+        document.getElementById('time').innerHTML=v;
+    }
+    updateTime();
+    //-->
+</script>
 </head>
 <body>
-	<div class="center">
+	<div class="container">
 		<div class="navigation">
 			<ul class="nav">
 				<li class="active"><a href=":javascript;">Home</a></li>
@@ -15,6 +42,7 @@
 				<li><a href=":javascript;">Contact</a></li>
 			</ul>
 		</div>
+		<div class="timer"><span id="time" /></div>
 	</div>
 </body>
 </html>
